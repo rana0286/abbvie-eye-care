@@ -1,1 +1,43 @@
-/* add global styles that can be loaded post LCP here */
+/* Section heading styles */
+main .section h2 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  line-height: 40px;
+  color: var(--brand-blue);
+  text-align: center;
+}
+
+/* Section style: gradient (blue gradient bar) */
+main .section.gradient {
+  background: linear-gradient(90deg, var(--brand-light-blue) 0%, var(--brand-blue) 100%);
+  margin: 0;
+  padding: 32px 0;
+}
+
+main .section.gradient p,
+main .section.gradient h1,
+main .section.gradient h2,
+main .section.gradient h3 {
+  color: white;
+  text-align: center;
+}
+
+/* Section style: dark-blue */
+main .section.dark-blue {
+  background-color: var(--brand-blue);
+  margin: 0;
+  padding: 0;
+}
+
+main .section.dark-blue > div {
+  max-width: unset;
+  padding: 0;
+}
+
+main .section.dark-blue h1,
+main .section.dark-blue h2,
+main .section.dark-blue h3,
+main .section.dark-blue h4,
+main .section.dark-blue p {
+  color: white;
+}

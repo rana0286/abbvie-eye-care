@@ -1,0 +1,115 @@
+.tabs-product-container .tabs-product-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.tabs-product .tabs-product-list {
+  display: flex;
+  overflow-x: auto;
+  border-bottom: 2px solid #e5e5e5;
+  gap: 0;
+  margin-bottom: 24px;
+}
+
+.tabs-product .tabs-product-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs-product .tabs-product-tab {
+  padding: 12px 20px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: transparent;
+  font-family: var(--heading-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.tabs-product .tabs-product-tab:hover {
+  color: var(--brand-blue);
+}
+
+.tabs-product .tabs-product-tab[aria-selected="true"] {
+  border-bottom-color: var(--brand-blue);
+  color: var(--brand-blue);
+  font-weight: 600;
+}
+
+.tabs-product .tabs-product-panel {
+  display: none;
+  padding: 16px 0;
+}
+
+.tabs-product .tabs-product-panel[aria-hidden="false"] {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tabs-product .tabs-product-panel > div:first-child {
+  display: none;
+}
+
+.tabs-product .tabs-product-panel h4 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-m);
+  line-height: 30px;
+  color: var(--text-color);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.tabs-product .tabs-product-panel p {
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+  line-height: 26px;
+  color: var(--text-color);
+  margin: 8px 0;
+}
+
+.tabs-product .tabs-product-panel a {
+  font-family: var(--heading-font-family);
+  font-size: 15px;
+  color: var(--brand-blue);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tabs-product .tabs-product-panel a:hover {
+  text-decoration: underline;
+}
+
+.tabs-product .tabs-product-panel img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (width >= 900px) {
+  .tabs-product-container .tabs-product-wrapper {
+    padding: 0 32px;
+  }
+
+  .tabs-product .tabs-product-panel[aria-hidden="false"] {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .tabs-product .tabs-product-panel > div:last-child {
+    flex: 1;
+    max-width: 546px;
+  }
+
+  .tabs-product .tabs-product-panel picture {
+    flex: 0 0 auto;
+  }
+
+  .tabs-product .tabs-product-panel img {
+    max-width: 400px;
+  }
+}

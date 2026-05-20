@@ -1,0 +1,147 @@
+.hero-eyecare-container .hero-eyecare-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-eyecare-container {
+  margin: 0;
+}
+
+.hero-eyecare {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-eyecare picture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-eyecare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-eyecare::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgb(0 0 0 / 50%) 0%,
+    rgb(0 0 0 / 30%) 40%,
+    rgb(0 0 0 / 0%) 65%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-eyecare .hero-eyecare-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.hero-eyecare .hero-eyecare-tagline {
+  color: white;
+  font-family: var(--heading-font-family);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+
+.hero-eyecare h1,
+.hero-eyecare h2,
+.hero-eyecare h3 {
+  color: white;
+  font-family: var(--heading-font-family);
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.hero-eyecare .hero-eyecare-description {
+  color: white;
+  font-family: var(--heading-font-family);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+  max-width: 493px;
+  margin: 0;
+}
+
+.hero-eyecare.no-image {
+  min-height: unset;
+  background-color: var(--light-color);
+}
+
+.hero-eyecare.no-image::after {
+  display: none;
+}
+
+.hero-eyecare.no-image .hero-eyecare-tagline,
+.hero-eyecare.no-image h1,
+.hero-eyecare.no-image h2,
+.hero-eyecare.no-image h3,
+.hero-eyecare.no-image .hero-eyecare-description {
+  color: var(--text-color);
+}
+
+@media (width >= 600px) {
+  .hero-eyecare {
+    min-height: 360px;
+  }
+
+  .hero-eyecare h1,
+  .hero-eyecare h2,
+  .hero-eyecare h3 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .hero-eyecare .hero-eyecare-description {
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 60%;
+  }
+}
+
+@media (width >= 900px) {
+  .hero-eyecare {
+    min-height: 420px;
+  }
+
+  .hero-eyecare .hero-eyecare-content {
+    padding: 40px 32px;
+  }
+
+  .hero-eyecare .hero-eyecare-tagline {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .hero-eyecare h1,
+  .hero-eyecare h2,
+  .hero-eyecare h3 {
+    font-size: 52px;
+    line-height: 56px;
+  }
+
+  .hero-eyecare .hero-eyecare-description {
+    font-size: 20px;
+    line-height: 24px;
+    max-width: 493px;
+  }
+}

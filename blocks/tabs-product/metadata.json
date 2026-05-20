@@ -1,0 +1,39 @@
+{
+  "variantName": "tabs-product",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-05-19T06:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.abbvieeyecare.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "product-details",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "tab label + logo image + product description + links",
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product information tabs",
+      "multi-product showcase with details",
+      "switchable content panels with imagery"
+    ],
+    "notSuitableFor": [
+      "FAQ-style tabs",
+      "text-only tab content",
+      "tabs with complex interactive content"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T06:48:00.000Z"
+  }
+}
