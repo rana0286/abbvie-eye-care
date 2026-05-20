@@ -1,0 +1,39 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-05-19T06:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.abbvieeyecare.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "commitment-statement",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + heading + horizontal rule + paragraph",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "image + text side-by-side on dark backgrounds",
+      "commitment or value proposition sections",
+      "feature highlight with supporting image"
+    ],
+    "notSuitableFor": [
+      "light background columns",
+      "multi-row content columns",
+      "columns with multiple CTAs"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T06:48:00.000Z"
+  }
+}

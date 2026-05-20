@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-audience",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-19T06:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.abbvieeyecare.com/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "audience-navigation",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "linked image cards",
+    "buttonCount": 0,
+    "imageCount": 3
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "audience segmentation navigation",
+      "linked image card grids",
+      "homepage role-based navigation"
+    ],
+    "notSuitableFor": [
+      "product listing cards",
+      "article/blog cards with descriptions",
+      "cards without images"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T06:48:00.000Z"
+  }
+}

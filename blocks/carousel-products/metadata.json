@@ -1,0 +1,39 @@
+{
+  "variantName": "carousel-products",
+  "baseBlock": "carousel",
+  "version": "1.0.0",
+  "created": "2026-05-19T06:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.abbvieeyecare.com/",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-showcase",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "product logo images in horizontal carousel",
+    "buttonCount": 0,
+    "imageCount": 10
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product logo carousels",
+      "brand showcase sliders",
+      "partner logo rotators"
+    ],
+    "notSuitableFor": [
+      "full-width hero carousels",
+      "testimonial sliders",
+      "image gallery carousels"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T06:48:00.000Z"
+  }
+}

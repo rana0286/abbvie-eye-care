@@ -1,0 +1,39 @@
+{
+  "variantName": "hero-eyecare",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2026-05-19T06:48:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www.abbvieeyecare.com/",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "spacious",
+    "purpose": "homepage-hero",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tagline + heading + description",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage hero banners",
+      "landing pages with full-width background images",
+      "brand announcement pages"
+    ],
+    "notSuitableFor": [
+      "text-only hero sections",
+      "hero sections with CTA buttons",
+      "product detail page heroes"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-19T06:48:00.000Z"
+  }
+}
