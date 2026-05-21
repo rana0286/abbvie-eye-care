@@ -141,13 +141,15 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
   }
 }
 
-/* brand / logo */
+/* brand / logo (Issue #1: logo image, not text) */
 header .nav-brand {
   grid-area: brand;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
   padding: 0 24px;
+  display: flex;
+  align-items: center;
 }
 
 header nav .nav-brand img {
@@ -158,7 +160,8 @@ header nav .nav-brand img {
 @media (width >= 900px) {
   header .nav-brand {
     order: 0;
-    padding: 28px 20px 28px 40px;
+    padding: 0 20px 0 40px;
+    height: 101px;
   }
 }
 
@@ -275,6 +278,7 @@ header nav .nav-sections ul > li > ul > li {
   text-transform: uppercase;
 }
 
+/* Issue #2: center nav items vertically + horizontally */
 @media (width >= 900px) {
   header nav .nav-sections {
     display: flex;
@@ -284,6 +288,7 @@ header nav .nav-sections ul > li > ul > li {
     padding: 0;
     background-color: transparent;
     order: 1;
+    height: 101px;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
@@ -291,17 +296,28 @@ header nav .nav-sections ul > li > ul > li {
     padding: 0;
   }
 
+  header nav .nav-sections .default-content-wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
   header nav .nav-sections ul {
     display: flex;
     gap: 0;
     margin: 0;
     font-size: 16px;
+    height: 100%;
+    align-items: center;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
-    padding: 20px 27px;
+    padding: 0 27px;
+    height: 100%;
+    display: flex;
+    align-items: center;
     border-bottom: 2px solid transparent;
     transition: border-bottom-color 250ms;
   }
@@ -314,6 +330,8 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
     padding: 10px 0;
     text-transform: uppercase;
+    height: auto;
+    display: block;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a {
@@ -323,24 +341,24 @@ header nav .nav-sections ul > li > ul > li {
     font-weight: 400;
   }
 
-  /* dropdown arrow on items with submenus */
+  /* Issue #3: dropdown arrow to the RIGHT of menu text */
   header nav .nav-sections .nav-drop::after {
     content: '';
     display: inline-block;
-    position: relative;
-    top: -1px;
     margin-left: 8px;
     width: 7px;
     height: 7px;
     border-right: 2px solid white;
     border-bottom: 2px solid white;
     transform: rotate(45deg);
+    position: relative;
+    top: -2px;
   }
 
-  /* hover shows submenu */
+  /* Issue #5: white underline on hover */
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections .default-content-wrapper > ul > li:hover {
-    border-bottom-color: #071d49;
+    border-bottom-color: white;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
@@ -348,16 +366,30 @@ header nav .nav-sections ul > li > ul > li {
     text-decoration: underline;
   }
 
+  /* Issue #4: submenu popover with triangle arrow */
   header nav .nav-sections .nav-drop:hover > ul {
     display: block;
     position: absolute;
-    left: 0;
+    left: 12px;
     top: 100%;
     min-width: 300px;
-    padding: 16px 24px;
+    padding: 20px 24px;
     background-color: white;
     white-space: initial;
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     z-index: 100;
+  }
+
+  /* triangle arrow pointing up */
+  header nav .nav-sections .nav-drop:hover > ul::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
   }
 }
