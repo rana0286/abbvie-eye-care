@@ -314,6 +314,13 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     flex: 0 1 auto;
     position: relative;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li > a {
     padding: 0 27px;
     height: 100%;
     display: flex;
@@ -341,8 +348,8 @@ header nav .nav-sections ul > li > ul > li {
     font-weight: 400;
   }
 
-  /* Issue #3: dropdown arrow to the RIGHT of menu text */
-  header nav .nav-sections .nav-drop::after {
+  /* dropdown arrow to the right of menu text */
+  header nav .nav-sections .nav-drop > a::after {
     content: '';
     display: inline-block;
     margin-left: 8px;
@@ -355,13 +362,9 @@ header nav .nav-sections ul > li > ul > li {
     top: -2px;
   }
 
-  /* hover: white underline on main menu text */
-  /* stylelint-disable-next-line no-descending-specificity */
-  header nav .nav-sections .default-content-wrapper > ul > li:hover {
+  /* hover: white underline on link */
+  header nav .nav-sections .default-content-wrapper > ul > li > a:hover {
     border-bottom-color: white;
-  }
-
-  header nav .nav-sections .default-content-wrapper > ul > li:hover > a {
     text-decoration: underline;
     text-underline-offset: 4px;
   }
@@ -371,7 +374,7 @@ header nav .nav-sections ul > li > ul > li {
     text-decoration: underline;
   }
 
-  /* submenu popover */
+  /* submenu popover - shows when hovering the link */
   header nav .nav-sections .nav-drop:hover > ul {
     display: block;
     position: absolute;
