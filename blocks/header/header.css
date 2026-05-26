@@ -325,13 +325,14 @@ header nav .nav-sections ul > li > ul > li {
     height: 100%;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom-color 250ms;
+    text-decoration: none;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
     display: none;
     position: relative;
+    height: auto;
+    flex: none;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
@@ -339,6 +340,7 @@ header nav .nav-sections ul > li > ul > li {
     text-transform: uppercase;
     height: auto;
     display: block;
+    border-bottom: 0;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a {
@@ -366,10 +368,10 @@ header nav .nav-sections ul > li > ul > li {
     top: -2px;
   }
 
-  /* hover: white underline on link */
+  /* hover: single white underline on text only */
   header nav .nav-sections .default-content-wrapper > ul > li > a:hover {
-    border-bottom-color: white;
     text-decoration: underline;
+    text-decoration-color: white;
     text-underline-offset: 4px;
   }
 
@@ -379,29 +381,31 @@ header nav .nav-sections ul > li > ul > li {
     text-decoration: none;
   }
 
-  /* submenu popover - shows when hovering the link */
+  /* submenu popover - hover on li so popover stays when moving cursor down */
   header nav .nav-sections .nav-drop:hover > ul {
     display: block;
     position: absolute;
-    left: 0;
-    top: 100%;
+    left: 27px;
+    top: calc(100% - 15px);
     min-width: 480px;
-    padding: 0;
+    height: auto;
+    padding: 15px 0;
     background-color: white;
     white-space: nowrap;
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     z-index: 100;
+    overflow: visible;
   }
 
-  /* half-arrow pointer at far left */
+  /* half-arrow pointer aligned to text left */
   header nav .nav-sections .nav-drop:hover > ul::before {
     content: '';
     position: absolute;
-    top: -20px;
+    top: -15px;
     left: 0;
     width: 0;
     height: 0;
-    border-bottom: 20px solid white;
-    border-right: 20px solid transparent;
+    border-bottom: 15px solid white;
+    border-right: 15px solid transparent;
   }
 }
