@@ -355,10 +355,15 @@ header nav .nav-sections ul > li > ul > li {
     top: -2px;
   }
 
-  /* Issue #5: white underline on hover */
+  /* hover: white underline on main menu text */
   /* stylelint-disable-next-line no-descending-specificity */
   header nav .nav-sections .default-content-wrapper > ul > li:hover {
     border-bottom-color: white;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li:hover > a {
+    text-decoration: underline;
+    text-underline-offset: 4px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
@@ -366,11 +371,11 @@ header nav .nav-sections ul > li > ul > li {
     text-decoration: underline;
   }
 
-  /* Issue #4: submenu popover with triangle arrow */
+  /* submenu popover */
   header nav .nav-sections .nav-drop:hover > ul {
     display: block;
     position: absolute;
-    left: 12px;
+    left: 0;
     top: 100%;
     min-width: 300px;
     padding: 20px 24px;
@@ -380,16 +385,15 @@ header nav .nav-sections ul > li > ul > li {
     z-index: 100;
   }
 
-  /* triangle arrow pointing up */
+  /* half-arrow pointer at far left */
   header nav .nav-sections .nav-drop:hover > ul::before {
     content: '';
     position: absolute;
     top: -20px;
-    left: 20px;
+    left: 0;
     width: 0;
     height: 0;
     border-bottom: 20px solid white;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
+    border-right: 20px solid transparent;
   }
 }
