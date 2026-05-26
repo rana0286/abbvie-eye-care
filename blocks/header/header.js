@@ -43,6 +43,14 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   if (navSections) {
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
+      // Unwrap <a> from <p> — move link directly under <li>
+      const p = navSection.querySelector(':scope > p');
+      if (p && p.querySelector('a')) {
+        const link = p.querySelector('a');
+        navSection.insertBefore(link, p);
+        p.remove();
+      }
+
       if (navSection.querySelector('ul')) {
         navSection.classList.add('nav-drop');
         navSection.setAttribute('aria-expanded', 'false');
