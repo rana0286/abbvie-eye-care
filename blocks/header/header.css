@@ -335,7 +335,7 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li {
-    padding: 10px 0;
+    padding: 0;
     text-transform: uppercase;
     height: auto;
     display: block;
@@ -343,9 +343,13 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a {
     color: #333;
-    font-size: 14px;
+    font-size: 18px;
     font-family: var(--body-font-family);
     font-weight: 400;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: background-color 0.2s;
   }
 
   /* dropdown arrow to the right of menu text */
@@ -370,8 +374,9 @@ header nav .nav-sections ul > li > ul > li {
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li > ul > li a:hover {
-    color: #071d49;
-    text-decoration: underline;
+    background-color: #eaf1f7;
+    color: var(--brand-blue);
+    text-decoration: none;
   }
 
   /* submenu popover - shows when hovering the link */
@@ -380,10 +385,10 @@ header nav .nav-sections ul > li > ul > li {
     position: absolute;
     left: 0;
     top: 100%;
-    min-width: 300px;
-    padding: 20px 24px;
+    min-width: 480px;
+    padding: 0;
     background-color: white;
-    white-space: initial;
+    white-space: nowrap;
     box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
     z-index: 100;
   }
