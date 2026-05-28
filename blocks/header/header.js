@@ -91,6 +91,8 @@ export default async function decorate(block) {
     if (igLink) igLink.classList.add('nav-social-icon', 'nav-social-ig');
     const piLink = navTools.querySelector('a[href*="prescribing"]');
     if (piLink) piLink.classList.add('nav-separator');
+    const contactLink = navTools.querySelector('a[href*="contact"]');
+    if (contactLink) contactLink.classList.add('nav-separator');
   }
 
   // hamburger for mobile

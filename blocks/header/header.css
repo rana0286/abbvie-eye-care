@@ -164,6 +164,8 @@ header nav .nav-brand img {
     padding: 0 40px 0 max(20px, calc((100% - 1150px) / 2));
     height: 101px;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -184,26 +186,28 @@ header nav .nav-tools {
   }
 
   header nav .nav-tools .default-content-wrapper {
-    margin: 0;
-    padding: 0;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 0 20px;
   }
 
   header nav .nav-tools ul {
     list-style: none;
     margin: 0;
-    padding: 8px 20px;
-    text-align: right;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
     line-height: 24px;
   }
 
   header nav .nav-tools li {
     display: inline-block;
     padding: 0;
-    vertical-align: baseline;
+    white-space: nowrap;
   }
 
   header nav .nav-tools li:first-child {
-    float: left;
+    margin-right: auto;
   }
 
   header nav .nav-tools a:any-link {
@@ -214,6 +218,7 @@ header nav .nav-tools {
     font-weight: 400;
     padding: 0 25px;
     display: inline;
+    line-height: 16px;
   }
 
   header nav .nav-tools a:hover {
@@ -222,7 +227,7 @@ header nav .nav-tools {
 
   header nav .nav-tools li:first-child a {
     font-weight: 900;
-    padding: 0 25px 0 0;
+    padding: 0;
   }
 
   header nav .nav-tools a.nav-separator {
