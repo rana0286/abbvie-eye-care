@@ -184,21 +184,26 @@ header nav .nav-tools {
   }
 
   header nav .nav-tools .default-content-wrapper {
-    text-align: right;
-    padding: 8px 20px;
     margin: 0;
+    padding: 0;
   }
 
   header nav .nav-tools ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 8px 20px;
     text-align: right;
+    line-height: 24px;
   }
 
   header nav .nav-tools li {
     display: inline-block;
     padding: 0;
+    vertical-align: baseline;
+  }
+
+  header nav .nav-tools li:first-child {
+    float: left;
   }
 
   header nav .nav-tools a:any-link {
@@ -215,20 +220,16 @@ header nav .nav-tools {
     text-decoration: underline;
   }
 
-  header nav .nav-tools li:first-child {
-    float: left;
-  }
-
   header nav .nav-tools li:first-child a {
     font-weight: 900;
     padding: 0 25px 0 0;
   }
 
-  header nav .nav-tools .nav-separator {
+  header nav .nav-tools a.nav-separator {
     border-left: 1px solid #000;
   }
 
-  header nav .nav-tools .nav-rep-button {
+  header nav .nav-tools a.nav-rep-button {
     background-color: #2e5598;
     color: #a8bdd7;
     padding: 5px 25px;
@@ -237,17 +238,18 @@ header nav .nav-tools {
     font-size: 12px;
   }
 
-  header nav .nav-tools .nav-rep-button:hover {
+  header nav .nav-tools a.nav-rep-button:hover {
     color: white;
     text-decoration: none;
   }
 
-  header nav .nav-tools .nav-social-icon {
+  header nav .nav-tools a.nav-social-icon {
     border-left: 0;
-    padding: 0 5px 0 18px;
     font-size: 0;
+    overflow: hidden;
     width: 16px;
-    height: 16px;
+    height: 14px;
+    padding: 0;
     display: inline-block;
     background-size: contain;
     background-repeat: no-repeat;
@@ -255,12 +257,12 @@ header nav .nav-tools {
     vertical-align: middle;
   }
 
-  header nav .nav-tools .nav-social-fb {
+  header nav .nav-tools a.nav-social-fb {
     background-image: url('/da-upload/media/facebook-icon.png');
     padding: 0 20px 0 25px;
   }
 
-  header nav .nav-tools .nav-social-ig {
+  header nav .nav-tools a.nav-social-ig {
     background-image: url('/da-upload/media/instagram-icon.png');
     padding: 0 5px 0 18px;
   }
