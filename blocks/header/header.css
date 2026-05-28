@@ -186,32 +186,33 @@ header nav .nav-tools {
   header nav .nav-tools {
     display: block;
     background-color: #b9c1c8;
+    padding: 8px 0;
     width: 100%;
     order: -1;
     flex: 0 0 100%;
   }
 
   header nav .nav-tools .default-content-wrapper {
-    max-width: 1150px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
+    margin: 0;
   }
 
   header nav .nav-tools ul {
     list-style: none;
     margin: 0;
-    padding: 13px 0;
-    display: flex;
-    align-items: center;
+    padding: 8px 20px;
+    text-align: right;
     line-height: 24px;
   }
 
   header nav .nav-tools li {
+    display: inline-block;
     white-space: nowrap;
+    border-bottom: 0;
   }
 
   header nav .nav-tools li:first-child {
-    margin-right: auto;
+    float: left;
   }
 
   header nav .nav-tools a:any-link {
@@ -220,7 +221,7 @@ header nav .nav-tools {
     font-size: 12px;
     font-family: var(--body-font-family);
     font-weight: 400;
-    padding: 0 20px;
+    padding: 0 25px;
   }
 
   header nav .nav-tools a:hover {
@@ -228,10 +229,7 @@ header nav .nav-tools {
   }
 
   header nav .nav-tools li:first-child a {
-    font-size: 13px;
-    font-weight: 700;
-    padding: 0;
-    letter-spacing: 0.5px;
+    font-weight: 900;
   }
 
   header nav .nav-tools a.nav-separator {
@@ -324,6 +322,7 @@ header nav .nav-tools {
     position: relative;
     padding: 0;
     height: 100%;
+    border-bottom: 0;
     display: flex;
     align-items: center;
   }
