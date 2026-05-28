@@ -167,7 +167,8 @@ header nav .nav-tools {
   }
 
   header nav {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
     height: auto;
   }
 
@@ -180,10 +181,14 @@ header nav .nav-tools {
     display: none;
   }
 
+
   /* ----- Utility Bar ----- */
   header nav .nav-tools {
     display: block;
     background-color: #b9c1c8;
+    width: 100%;
+    order: -1;
+    flex: 0 0 100%;
   }
 
   header nav .nav-tools .default-content-wrapper {
@@ -271,20 +276,21 @@ header nav .nav-tools {
 
   /* ----- Main Nav Bar ----- */
   header nav .nav-brand {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     height: 101px;
-    padding: 0;
-    vertical-align: top;
+    padding: 0 40px 0 0;
+    order: 0;
   }
 
   header nav .nav-sections {
-    display: inline-flex;
+    display: flex;
     visibility: visible;
     align-items: center;
     height: 101px;
     padding: 0;
-    vertical-align: top;
+    order: 1;
+    flex: 1;
   }
 
   header nav .nav-sections .default-content-wrapper {
