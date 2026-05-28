@@ -28,10 +28,25 @@ export default async function decorate(block) {
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
   const classes = ['brand', 'sections', 'tools'];
-  const sections = [...nav.children].filter((child) => child.tagName === 'DIV');
+  const divSections = [...nav.children].filter((child) => child.tagName === 'DIV');
   classes.forEach((c, i) => {
-    if (sections[i]) sections[i].classList.add(`nav-${c}`);
+    if (divSections[i]) divSections[i].classList.add(`nav-${c}`);
   });
+
+  // If tools section not found as a div, look for a standalone ul with utility links
+  if (!nav.querySelector('.nav-tools')) {
+    const allUls = [...nav.children].filter((child) => child.tagName === 'UL' || (child.tagName === 'DIV' && !child.classList.contains('nav-brand') && !child.classList.contains('nav-sections')));
+    const utilUl = allUls.find((el) => el.querySelector('a[href*="request-a-rep"], a[href*="facebook"]'));
+    if (utilUl) {
+      const toolsDiv = document.createElement('div');
+      toolsDiv.classList.add('nav-tools');
+      const wrapper = document.createElement('div');
+      wrapper.classList.add('default-content-wrapper');
+      wrapper.append(utilUl);
+      toolsDiv.append(wrapper);
+      nav.append(toolsDiv);
+    }
+  }
 
   const navBrand = nav.querySelector('.nav-brand');
   const brandLink = navBrand.querySelector('.button');
@@ -74,6 +89,8 @@ export default async function decorate(block) {
     if (fbLink) fbLink.classList.add('nav-social-icon', 'nav-social-fb');
     const igLink = navTools.querySelector('a[href*="instagram"]');
     if (igLink) igLink.classList.add('nav-social-icon', 'nav-social-ig');
+    const piLink = navTools.querySelector('a[href*="prescribing"]');
+    if (piLink) piLink.classList.add('nav-separator');
   }
 
   // hamburger for mobile
