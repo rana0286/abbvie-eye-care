@@ -65,11 +65,15 @@ export default async function decorate(block) {
     });
   }
 
-  // Mark "Request a Rep" link as a button
+  // Mark utility bar links
   const navTools = nav.querySelector('.nav-tools');
   if (navTools) {
     const repLink = navTools.querySelector('a[href*="request-a-rep"]');
     if (repLink) repLink.classList.add('nav-rep-button');
+    const fbLink = navTools.querySelector('a[href*="facebook"]');
+    if (fbLink) fbLink.classList.add('nav-social-icon', 'nav-social-fb');
+    const igLink = navTools.querySelector('a[href*="instagram"]');
+    if (igLink) igLink.classList.add('nav-social-icon', 'nav-social-ig');
   }
 
   // hamburger for mobile

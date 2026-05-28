@@ -43,6 +43,7 @@ header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
   }
+
 }
 
 header nav p {
@@ -160,8 +161,9 @@ header nav .nav-brand img {
 @media (width >= 900px) {
   header .nav-brand {
     order: 0;
-    padding: 0 20px 0 40px;
+    padding: 0 40px 0 max(20px, calc((100% - 1150px) / 2));
     height: 101px;
+    flex-shrink: 0;
   }
 }
 
@@ -175,45 +177,48 @@ header nav .nav-tools {
   header nav .nav-tools {
     display: block;
     background-color: #b9c1c8;
-    padding: 8px 40px;
+    padding: 12px 40px;
     width: 100%;
     flex: 0 0 100%;
     order: -1;
   }
 
   header nav .nav-tools .default-content-wrapper {
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 0;
-    flex-wrap: wrap;
   }
 
   header nav .nav-tools p {
     font-size: 12px;
-    line-height: 30px;
+    line-height: 1.5;
     color: #333;
     font-family: var(--body-font-family);
+    display: flex;
+    align-items: center;
   }
 
   header nav .nav-tools p:first-child {
     font-size: 13px;
     font-weight: 700;
-    margin-right: 24px;
+    margin-right: auto;
+    white-space: nowrap;
   }
 
   header nav .nav-tools a:any-link {
     color: #333;
     text-decoration: none;
     font-size: 12px;
-    padding: 0 12px;
-    border-left: 1px solid #666;
+    padding: 0 25px;
+    border-left: 1px solid #000;
+    white-space: nowrap;
   }
 
   header nav .nav-tools a:first-child {
     border-left: 0;
+    padding-left: 0;
   }
 
   header nav .nav-tools a:hover {
@@ -224,14 +229,36 @@ header nav .nav-tools {
     background-color: var(--brand-blue);
     color: #a8bdd7;
     padding: 5px 25px;
-    margin: 0 12px;
+    margin-left: 20px;
     border-left: 0;
+    border: 1px solid var(--brand-blue);
     font-size: 12px;
   }
 
   header nav .nav-tools .nav-rep-button:hover {
     color: white;
     text-decoration: none;
+  }
+
+  header nav .nav-tools .nav-social-icon {
+    border-left: 0;
+    padding: 0 5px;
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  header nav .nav-tools .nav-social-fb {
+    background-image: url('/da-upload/media/facebook-icon.png');
+    margin-left: 15px;
+  }
+
+  header nav .nav-tools .nav-social-ig {
+    background-image: url('/da-upload/media/instagram-icon.png');
   }
 }
 
@@ -278,7 +305,7 @@ header nav .nav-sections ul > li > ul > li {
   text-transform: uppercase;
 }
 
-/* Issue #2: center nav items vertically + horizontally */
+/* center nav items vertically + horizontally */
 @media (width >= 900px) {
   header nav .nav-sections {
     display: flex;
@@ -289,6 +316,7 @@ header nav .nav-sections ul > li > ul > li {
     background-color: transparent;
     order: 1;
     height: 101px;
+    flex: 1;
   }
 
   header nav[aria-expanded='true'] .nav-sections {
